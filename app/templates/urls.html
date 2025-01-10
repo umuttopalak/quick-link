@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3 class="mb-0">{{ _('All URLs') }}</h3>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>{{ _('Short URL') }}</th>
+                        <th>{{ _('Original URL') }}</th>
+                        <th>{{ _('Clicks') }}</th>
+                        <th>{{ _('Created At') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for url in urls %}
+                    <tr>
+                        <td><a href="{{ url_for('main.redirect_to_url', short_id=url.short_id) }}" target="_blank">
+                            {{ request.host_url }}{{ url.short_id }}
+                        </a></td>
+                        <td>{{ url.original_url }}</td>
+                        <td>{{ url.clicks }}</td>
+                        <td>{{ url.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %} 
