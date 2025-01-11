@@ -12,10 +12,8 @@ login_manager = LoginManager()
 babel = Babel()
 
 def get_locale():
-    # Önce session'da kayıtlı dili kontrol et
     if 'lang' in session:
         return session['lang']
-    # Yoksa tarayıcının tercih ettiği dili kullan
     return request.accept_languages.best_match(['en', 'tr'])
 
 def create_app():
