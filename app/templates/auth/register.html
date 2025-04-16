@@ -1,34 +1,55 @@
 {% extends "base.html" %}
 
+{% block title %}{{ _('Kayıt Ol - Quick Link') }}{% endblock %}
+
 {% block content %}
 <div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card">
+    <div class="col-md-6 col-lg-5">
+        <div class="text-center mb-4">
+            <h1 class="h3 text-primary mb-3">
+                <i class="fas fa-user-plus me-2"></i>{{ _('Hesap Oluştur') }}
+            </h1>
+            <p class="text-muted">{{ _('Kısaltılmış URLler oluşturmaya ve yönetmeye başlamak için kayıt olun') }}</p>
+        </div>
+        
+        <div class="card shadow-sm">
             <div class="card-header">
-                <h3 class="text-center mb-0">{{ _('Register') }}</h3>
+                <h3 class="text-center mb-0">{{ _('Kayıt Ol') }}</h3>
             </div>
             <div class="card-body">
                 <form method="POST">
                     <div class="mb-3">
-                        <label for="username" class="form-label">{{ _('Username') }}</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <label for="username" class="form-label">
+                            <i class="fas fa-user me-2"></i>{{ _('Kullanıcı Adı') }}
+                        </label>
+                        <input type="text" class="form-control" id="username" name="username" required autofocus>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">{{ _('Email') }}</label>
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope me-2"></i>{{ _('E-posta') }}
+                        </label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">{{ _('Password') }}</label>
+                        <label for="password" class="form-label">
+                            <i class="fas fa-lock me-2"></i>{{ _('Şifre') }}
+                        </label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">{{ _('Register') }}</button>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-user-plus me-2"></i>{{ _('Kayıt Ol') }}
+                        </button>
                     </div>
                 </form>
                 <hr>
-                <p class="text-center">
-                    {{ _('Already have an account?') }} <a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a>
-                </p>
+                <div class="text-center">
+                    <p class="mb-0">{{ _('Zaten bir hesabınız var mı?') }} 
+                        <a href="{{ url_for('auth.login') }}" class="text-primary fw-bold">
+                            {{ _('Giriş Yap') }}
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

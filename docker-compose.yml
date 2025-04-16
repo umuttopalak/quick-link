@@ -8,30 +8,8 @@ services:
     environment:
       - FLASK_APP=${FLASK_APP}
       - FLASK_ENV=${FLASK_ENV}
-      - DATABASE_URL=${DATABASE_URL}
-    depends_on:
-      - db
+      - DATABASE_URL=postgresql://quicklink_owner:npg_gWb5U1GDrETv@ep-cold-lake-a4xlf6bc-pooler.us-east-1.aws.neon.tech/quicklink?sslmode=require
     restart: always
 
-  db:
-    image: postgres:13-alpine
-    environment:
-      - POSTGRES_USER=urlshortener
-      - POSTGRES_PASSWORD=urlshortener
-      - POSTGRES_DB=urlshortener
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    networks:
-      - url-shortener-net
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U urlshortener"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-
 volumes:
-  postgres_data:
-
-networks:
-  url-shortener-net:
-    driver: bridge 
+  postgres_data: 

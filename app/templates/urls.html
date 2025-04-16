@@ -1,34 +1,85 @@
 {% extends "base.html" %}
 
+{% block title %}{{ _('Tüm URLler - Quick Link') }}{% endblock %}
+
 {% block content %}
-<div class="card">
-    <div class="card-header">
-        <h3 class="mb-0">{{ _('All URLs') }}</h3>
-    </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>{{ _('Short URL') }}</th>
-                        <th>{{ _('Original URL') }}</th>
-                        <th>{{ _('Clicks') }}</th>
-                        <th>{{ _('Created At') }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for url in urls %}
-                    <tr>
-                        <td><a href="{{ url_for('main.redirect_to_url', short_id=url.short_id) }}" target="_blank">
-                            {{ request.host_url }}{{ url.short_id }}
-                        </a></td>
-                        <td>{{ url.original_url }}</td>
-                        <td>{{ url.clicks }}</td>
-                        <td>{{ url.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        <div class="mb-4">
+            <h1 class="h3 mb-0 text-primary">
+                <i class="fas fa-link me-2"></i>{{ _('Kısaltılmış URLleriniz') }}
+            </h1>
+            <p class="text-muted">{{ _('Tüm kısaltılmış linklerinizi tek bir yerde yönetin ve takip edin.') }}</p>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">
+                    <i class="fas fa-list me-2"></i>{{ _('Tüm URLler') }}
+                </h5>
+                <a href="{{ url_for('main.home') }}" class="btn btn-primary btn-sm">
+                    <i class="fas fa-plus me-1"></i>{{ _('Yeni Link Oluştur') }}
+                </a>
+            </div>
+            <div class="card-body p-0">
+                {% if urls %}
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th>{{ _('Kısa URL') }}</th>
+                                <th>{{ _('Orijinal URL') }}</th>
+                                <th class="text-center">
+                                    <i class="fas fa-chart-line me-1"></i>{{ _('Tıklamalar') }}
+                                </th>
+                                <th>
+                                    <i class="fas fa-calendar-alt me-1"></i>{{ _('Oluşturulma Tarihi') }}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for url in urls %}
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-link text-primary me-2"></i>
+                                        <a href="{{ url_for('main.redirect_to_url', short_id=url.short_id) }}" 
+                                           target="_blank" class="text-break">
+                                            {{ request.host_url }}{{ url.short_id }}
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="text-truncate" style="max-width: 250px;" 
+                                    title="{{ url.original_url }}">
+                                    {{ url.original_url }}
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge bg-primary rounded-pill">{{ url.clicks }}</span>
+                                </td>
+                                <td>
+                                    <small class="text-muted">
+                                        <i class="far fa-clock me-1"></i>
+                                        {{ url.created_at.strftime('%Y-%m-%d %H:%M') }}
+                                    </small>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="p-5 text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-link-slash fa-4x text-muted"></i>
+                    </div>
+                    <h4>{{ _('Henüz URL yok') }}</h4>
+                    <p class="text-muted">{{ _('Burada görmek için ilk kısaltılmış URL\'nizi oluşturun.') }}</p>
+                    <a href="{{ url_for('main.home') }}" class="btn btn-primary">
+                        {{ _('İlk Linkinizi Oluşturun') }}
+                    </a>
+                </div>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>

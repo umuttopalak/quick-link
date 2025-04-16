@@ -18,3 +18,476 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
+#: app/__init__.py:32
+msgid "Please log in to access this page."
+msgstr "Please log in to access this page."
+
+#: app/auth.py:20
+msgid "Email address already registered"
+msgstr "Email address already registered"
+
+#: app/auth.py:32
+msgid "Registration successful! Please login."
+msgstr "Registration successful! Please login."
+
+#: app/auth.py:48
+msgid "Please check your login details"
+msgstr "Please check your login details"
+
+#: app/auth.py:52
+msgid "Successfully logged in!"
+msgstr "Successfully logged in!"
+
+#: app/auth.py:62
+msgid "Successfully logged out!"
+msgstr "Successfully logged out!"
+
+#: app/templates/base.html:6
+msgid "Quick Link | URL Kısaltıcı"
+msgstr "Quick Link | URL Shortener"
+
+#: app/templates/base.html:17
+msgid "Quick Link"
+msgstr "Quick Link"
+
+#: app/templates/base.html:28
+msgid "Ana Sayfa"
+msgstr "Home"
+
+#: app/templates/base.html:33 app/templates/urls.html:18
+msgid "Tüm URLler"
+msgstr "All URLs"
+
+#: app/templates/base.html:41
+msgid "Dil"
+msgstr "Language"
+
+#: app/templates/base.html:60
+msgid "Çıkış Yap"
+msgstr "Logout"
+
+#: app/templates/auth/login.html:39 app/templates/auth/register.html:49
+#: app/templates/base.html:67
+msgid "Giriş Yap"
+msgstr "Login"
+
+#: app/templates/auth/login.html:47 app/templates/auth/register.html:17
+#: app/templates/auth/register.html:41 app/templates/base.html:72
+msgid "Kayıt Ol"
+msgstr "Register"
+
+#: app/templates/base.html:98
+msgid "Tüm hakları saklıdır"
+msgstr "All rights reserved"
+
+#: app/templates/home.html:7
+msgid "Linklerinizi Kısaltın"
+msgstr "Shorten Your Links"
+
+#: app/templates/home.html:8
+msgid "Ücretsiz URL kısaltıcımız ile kısa, kolay paylaşılabilir linkler oluşturun."
+msgstr "Create short, easy-to-share links with our free URL shortener."
+
+#: app/templates/home.html:14
+msgid "URL Kısaltıcı"
+msgstr "URL Shortener"
+
+#: app/templates/home.html:26
+msgid "Kısalt"
+msgstr "Shorten"
+
+#: app/templates/home.html:33
+msgid "Kısa URL'niz hazır!"
+msgstr "Your short URL is ready!"
+
+#: app/templates/home.html:38
+msgid "Kopyala"
+msgstr "Copy"
+
+#: app/templates/home.html:53
+msgid "Hızlı & Basit"
+msgstr "Fast & Simple"
+
+#: app/templates/home.html:54
+msgid "Saniyeler içinde kısa linkler oluşturun."
+msgstr "Create short links in seconds."
+
+#: app/templates/home.html:64
+msgid "Tıklamaları Takip Edin"
+msgstr "Track Clicks"
+
+#: app/templates/home.html:65
+msgid "Kısaltılmış linklerinize kaç kişinin tıkladığını izleyin."
+msgstr "Monitor how many people click on your shortened links."
+
+#: app/templates/home.html:75
+msgid "Güvenli"
+msgstr "Secure"
+
+#: app/templates/home.html:76
+msgid "Linkleriniz güvenli ve ihtiyacınız olduğunda her zaman kullanılabilir."
+msgstr "Your links are secure and always available when you need them."
+
+#: app/templates/home.html:85
+msgid "Quick Link - Ücretsiz URL Kısaltıcı"
+msgstr "Quick Link - Free URL Shortener"
+
+#: app/templates/urls.html:3
+msgid "Tüm URLler - Quick Link"
+msgstr "All URLs - Quick Link"
+
+#: app/templates/urls.html:10
+msgid "Kısaltılmış URLleriniz"
+msgstr "Your Shortened URLs"
+
+#: app/templates/urls.html:12
+msgid "Tüm kısaltılmış linklerinizi tek bir yerde yönetin ve takip edin."
+msgstr "Manage and track all your shortened links in one place."
+
+#: app/templates/urls.html:21
+msgid "Yeni Link Oluştur"
+msgstr "Create New Link"
+
+#: app/templates/urls.html:30
+msgid "Kısa URL"
+msgstr "Short URL"
+
+#: app/templates/urls.html:31
+msgid "Orijinal URL"
+msgstr "Original URL"
+
+#: app/templates/urls.html:33
+msgid "Tıklamalar"
+msgstr "Clicks"
+
+#: app/templates/urls.html:36
+msgid "Oluşturulma Tarihi"
+msgstr "Created At"
+
+#: app/templates/urls.html:75
+msgid "Henüz URL yok"
+msgstr "No URLs yet"
+
+#: app/templates/urls.html:76
+msgid "Burada görmek için ilk kısaltılmış URL'nizi oluşturun."
+msgstr "Create your first shortened URL to see it here."
+
+#: app/templates/urls.html:78
+msgid "İlk Linkinizi Oluşturun"
+msgstr "Create Your First Link"
+
+#: app/templates/auth/login.html:3
+msgid "Giriş - Quick Link"
+msgstr "Login - Quick Link"
+
+#: app/templates/auth/login.html:10
+msgid "Tekrar Hoş Geldiniz"
+msgstr "Welcome Back"
+
+#: app/templates/auth/login.html:12
+msgid "Kısaltılmış URLlerinizi yönetmek için giriş yapın"
+msgstr "Login to manage your shortened URLs"
+
+#: app/templates/auth/login.html:17
+msgid "Giriş"
+msgstr "Login"
+
+#: app/templates/auth/login.html:23 app/templates/auth/register.html:29
+msgid "E-posta"
+msgstr "Email"
+
+#: app/templates/auth/login.html:29 app/templates/auth/register.html:35
+msgid "Şifre"
+msgstr "Password"
+
+#: app/templates/auth/login.html:35
+msgid "Beni hatırla"
+msgstr "Remember me"
+
+#: app/templates/auth/login.html:45
+msgid "Hesabınız yok mu?"
+msgstr "Don't have an account?"
+
+#: app/templates/auth/register.html:3
+msgid "Kayıt Ol - Quick Link"
+msgstr "Register - Quick Link"
+
+#: app/templates/auth/register.html:10
+msgid "Hesap Oluştur"
+msgstr "Create Account"
+
+#: app/templates/auth/register.html:12
+msgid "Kısaltılmış URLler oluşturmaya ve yönetmeye başlamak için kayıt olun"
+msgstr "Register to start creating and managing shortened URLs"
+
+#: app/templates/auth/register.html:23
+msgid "Kullanıcı Adı"
+msgstr "Username"
+
+#: app/templates/auth/register.html:47
+msgid "Zaten bir hesabınız var mı?"
+msgstr "Already have an account?"
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:556
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:560
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1124
+msgid "Aborted!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1349
+#: venv/lib/python3.12/site-packages/click/core.py:1379
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1396
+msgid "Options"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1424
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1437
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1645
+msgid "Commands"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1677
+msgid "Missing command."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1755
+msgid "No such command {name!r}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2313
+msgid "Value must be an iterable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2336
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2783
+msgid "env var: {var}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2813
+msgid "(dynamic)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2828
+msgid "default: {default}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2841
+msgid "required"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:457
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:520
+msgid "Show the version and exit."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:541
+msgid "Show this message and exit."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:49
+#: venv/lib/python3.12/site-packages/click/exceptions.py:88
+msgid "Error: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:80
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:129
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:131
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:187
+msgid "Missing argument"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:189
+msgid "Missing option"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:191
+msgid "Missing parameter"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:193
+msgid "Missing {param_type}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:200
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:220
+msgid "No such option: {name}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:234
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:270
+msgid "unknown error"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:277
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/formatting.py:156
+msgid "Usage:"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:233
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:415
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:475
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:325
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:333
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:176
+msgid "Error: {e.message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:267
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:301
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:395
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:415
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:471
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:612
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:636
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:826
+msgid "file"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:828
+msgid "directory"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:830
+msgid "path"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:881
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:890
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:898
+msgid "{name} {filename!r} is a directory."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:907
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:916
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:925
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:991
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+

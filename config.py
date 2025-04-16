@@ -12,4 +12,10 @@ class Config:
     TIMEZONE = 'Europe/Istanbul' 
     
     LANGUAGES = ['en', 'tr']
-    BABEL_DEFAULT_LOCALE = 'en' 
+    BABEL_DEFAULT_LOCALE = 'en'
+
+    # Session configuration
+    SESSION_TYPE = 'filesystem'
+    SESSION_PERMANENT = False
+    SESSION_USE_SIGNER = True
+    SESSION_FILE_DIR = './flask_session' 

@@ -2,6 +2,7 @@ from flask import Flask, request, session
 from flask_babel import Babel, _
 from flask_login import LoginManager
 from flask_migrate import Migrate
+from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 
 from config import Config
@@ -10,6 +11,7 @@ db = SQLAlchemy()
 migrate = Migrate()
 login_manager = LoginManager()
 babel = Babel()
+session_store = Session()
 
 def get_locale():
     if 'lang' in session:
@@ -24,6 +26,7 @@ def create_app():
     migrate.init_app(app, db)
     login_manager.init_app(app)
     babel.init_app(app, locale_selector=get_locale)
+    session_store.init_app(app)
     
     login_manager.login_view = 'auth.login'
     login_manager.login_message = _('Please log in to access this page.')

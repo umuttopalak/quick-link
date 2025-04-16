@@ -1,34 +1,53 @@
 {% extends "base.html" %}
 
+{% block title %}{{ _('Giriş - Quick Link') }}{% endblock %}
+
 {% block content %}
 <div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card">
+    <div class="col-md-6 col-lg-5">
+        <div class="text-center mb-4">
+            <h1 class="h3 text-primary mb-3">
+                <i class="fas fa-sign-in-alt me-2"></i>{{ _('Tekrar Hoş Geldiniz') }}
+            </h1>
+            <p class="text-muted">{{ _('Kısaltılmış URLlerinizi yönetmek için giriş yapın') }}</p>
+        </div>
+        
+        <div class="card shadow-sm">
             <div class="card-header">
-                <h3 class="text-center mb-0">{{ _('Login') }}</h3>
+                <h3 class="text-center mb-0">{{ _('Giriş') }}</h3>
             </div>
             <div class="card-body">
                 <form method="POST">
                     <div class="mb-3">
-                        <label for="email" class="form-label">{{ _('Email') }}</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope me-2"></i>{{ _('E-posta') }}
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email" required autofocus>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">{{ _('Password') }}</label>
+                        <label for="password" class="form-label">
+                            <i class="fas fa-lock me-2"></i>{{ _('Şifre') }}
+                        </label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                        <label class="form-check-label" for="remember">{{ _('Remember me') }}</label>
+                        <label class="form-check-label" for="remember">{{ _('Beni hatırla') }}</label>
                     </div>
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">{{ _('Login') }}</button>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-sign-in-alt me-2"></i>{{ _('Giriş Yap') }}
+                        </button>
                     </div>
                 </form>
                 <hr>
-                <p class="text-center">
-                    {{ _('Don\'t have an account?') }} <a href="{{ url_for('auth.register') }}">{{ _('Register') }}</a>
-                </p>
+                <div class="text-center">
+                    <p class="mb-0">{{ _('Hesabınız yok mu?') }} 
+                        <a href="{{ url_for('auth.register') }}" class="text-primary fw-bold">
+                            {{ _('Kayıt Ol') }}
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

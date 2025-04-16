@@ -47,7 +47,7 @@ def url_list():
     urls = URL.query.filter_by(user_id=current_user.id).order_by(URL.created_at.desc()).all()
     return render_template('urls.html', urls=urls)
 
-@main.route('/set-language/<lang>')
+@main.route('/set_language/<lang>')
 def set_language(lang):
     session['lang'] = lang
     return redirect(request.referrer or url_for('main.home')) 
