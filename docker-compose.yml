@@ -8,7 +8,7 @@ services:
     environment:
       - FLASK_APP=${FLASK_APP}
       - FLASK_ENV=${FLASK_ENV}
-      - DATABASE_URL=postgresql://quicklink_owner:npg_gWb5U1GDrETv@ep-cold-lake-a4xlf6bc-pooler.us-east-1.aws.neon.tech/quicklink?sslmode=require
+      - DATABASE_URL=${DATABASE_URL} # Env resetted
     restart: always
 
 volumes:
