@@ -2,10 +2,10 @@ from flask import Flask, request, session
 from flask_babel import Babel, _
 from flask_login import LoginManager
 from flask_migrate import Migrate
-from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 
 from config import Config
+from flask_session import Session
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -21,6 +21,9 @@ def get_locale():
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
+    
+    # SQLite kullanmayı zorlayalım
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///urls.db'
 
     db.init_app(app)
     migrate.init_app(app, db)

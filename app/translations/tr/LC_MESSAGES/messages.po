@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-10 23:10+0300\n"
+"POT-Creation-Date: 2025-05-04 18:17+0300\n"
 "PO-Revision-Date: 2025-01-10 23:10+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: tr\n"
@@ -16,93 +16,681 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: app/templates/base.html:23
-msgid "Language"
-msgstr "Dil"
+#: app/__init__.py:35
+msgid "Please log in to access this page."
+msgstr "Bu sayfaya erişmek için lütfen giriş yapın."
 
-#: app/templates/base.html:39
-msgid "Login"
-msgstr "Giriş"
-
-#: app/templates/base.html:42
-msgid "Register"
-msgstr "Kayıt Ol"
-
-#: app/templates/base.html:35
-msgid "Logout"
-msgstr "Çıkış"
-
-#: app/templates/base.html:17
-msgid "All URLs"
-msgstr "Tüm URL'ler"
-
-#: app/templates/home.html:8
-msgid "URL Shortener"
-msgstr "URL Kısaltıcı"
-
-#: app/templates/home.html:15
-msgid "Shorten"
-msgstr "Kısalt"
-
-#: app/templates/home.html:20
-msgid "Short URL:"
-msgstr "Kısa URL:"
-
-#: app/templates/home.html:24
-msgid "Copy"
-msgstr "Kopyala"
-
-#: app/templates/urls.html:4
-msgid "Short URL"
-msgstr "Kısa URL"
-
-#: app/templates/urls.html:5
-msgid "Original URL"
-msgstr "Orijinal URL"
-
-#: app/templates/urls.html:6
-msgid "Clicks"
-msgstr "Tıklanma"
-
-#: app/templates/urls.html:7
-msgid "Created At"
-msgstr "Oluşturulma Tarihi"
-
+#: app/auth.py:23
 msgid "Email address already registered"
 msgstr "Email adresi zaten kayıtlı"
 
-msgid "Please check your login details"
-msgstr "Lütfen giriş bilgilerinizi kontrol edin"
-
+#: app/auth.py:36
 msgid "Registration successful! Please login."
 msgstr "Kayıt başarılı! Lütfen giriş yapın."
 
+#: app/auth.py:52
+msgid "Please check your login details"
+msgstr "Lütfen giriş bilgilerinizi kontrol edin"
+
+#: app/auth.py:56
 msgid "Successfully logged in!"
 msgstr "Başarıyla giriş yapıldı!"
 
+#: app/auth.py:66
 msgid "Successfully logged out!"
 msgstr "Başarıyla çıkış yapıldı!"
 
-msgid "Email"
-msgstr "E-posta"
+#: app/auth.py:102
+#, fuzzy
+msgid "Successfully logged in with Google!"
+msgstr "Başarıyla giriş yapıldı!"
 
-msgid "Password"
-msgstr "Şifre"
+#: app/routes.py:69
+msgid "Bu işlem için yetkiniz yok."
+msgstr "Bu işlem için yetkiniz yok."
 
-msgid "Username"
-msgstr "Kullanıcı Adı"
+#: app/routes.py:76
+msgid "Link başarıyla silindi."
+msgstr "Link başarıyla silindi."
 
-msgid "Remember me"
-msgstr "Beni Hatırla"
+#: app/templates/base.html:6
+msgid "Quick Link | URL Kısaltıcı"
+msgstr "Quick Link | URL Kısaltıcı"
 
-msgid "Don't have an account?"
-msgstr "Hesabınız yok mu?"
+#: app/templates/base.html:17
+#, fuzzy
+msgid "Quick Link"
+msgstr "Hızlı giriş için:"
 
-msgid "Already have an account?"
-msgstr "Zaten hesabınız var mı?"
+#: app/templates/base.html:28
+msgid "Ana Sayfa"
+msgstr ""
 
-msgid "Please log in to access this page."
-msgstr "Bu sayfaya erişmek için lütfen giriş yapın."
+#: app/templates/base.html:33 app/templates/urls.html:18
+msgid "Tüm URLler"
+msgstr ""
+
+#: app/templates/base.html:41
+msgid "Dil"
+msgstr ""
+
+#: app/templates/base.html:66 app/templates/profile.html:10
+msgid "Profil"
+msgstr ""
+
+#: app/templates/base.html:69
+msgid "Linklerim"
+msgstr ""
+
+#: app/templates/base.html:73
+msgid "Çıkış Yap"
+msgstr ""
+
+#: app/templates/auth/login.html:89 app/templates/auth/register.html:100
+#: app/templates/base.html:80
+#, fuzzy
+msgid "Giriş Yap"
+msgstr "Google ile Giriş Yap"
+
+#: app/templates/auth/login.html:98 app/templates/auth/register.html:67
+#: app/templates/auth/register.html:91 app/templates/base.html:85
+msgid "Kayıt Ol"
+msgstr ""
+
+#: app/templates/base.html:111
+msgid "Tüm hakları saklıdır"
+msgstr ""
+
+#: app/templates/home.html:7
+msgid "Linklerinizi Kısaltın"
+msgstr ""
+
+#: app/templates/home.html:8
+msgid ""
+"Ücretsiz URL kısaltıcımız ile kısa, kolay paylaşılabilir linkler "
+"oluşturun."
+msgstr ""
+
+#: app/templates/home.html:14
+msgid "URL Kısaltıcı"
+msgstr ""
+
+#: app/templates/home.html:26
+msgid "Kısalt"
+msgstr ""
+
+#: app/templates/home.html:33
+msgid "Kısa URL'niz hazır!"
+msgstr ""
+
+#: app/templates/home.html:38
+msgid "Kopyala"
+msgstr ""
+
+#: app/templates/home.html:53
+msgid "Hızlı & Basit"
+msgstr ""
+
+#: app/templates/home.html:54
+msgid "Saniyeler içinde kısa linkler oluşturun."
+msgstr ""
+
+#: app/templates/home.html:64
+msgid "Tıklamaları Takip Edin"
+msgstr ""
+
+#: app/templates/home.html:65
+msgid "Kısaltılmış linklerinize kaç kişinin tıkladığını izleyin."
+msgstr ""
+
+#: app/templates/home.html:75
+msgid "Güvenli"
+msgstr ""
+
+#: app/templates/home.html:76
+msgid "Linkleriniz güvenli ve ihtiyacınız olduğunda her zaman kullanılabilir."
+msgstr ""
+
+#: app/templates/home.html:85
+msgid "Quick Link - Ücretsiz URL Kısaltıcı"
+msgstr ""
+
+#: app/templates/profile.html:3
+#, fuzzy
+msgid "Profil - Quick Link"
+msgstr "Hızlı giriş için:"
+
+#: app/templates/profile.html:12
+msgid "Hesap bilgilerinizi ve istatistiklerinizi görüntüleyin."
+msgstr ""
+
+#: app/templates/profile.html:33
+msgid "Kimlik doğrulama: "
+msgstr ""
+
+#: app/templates/profile.html:37
+msgid "Yerel"
+msgstr ""
+
+#: app/templates/profile.html:47
+msgid "İstatistikler"
+msgstr ""
+
+#: app/templates/profile.html:55
+msgid "Linkler"
+msgstr ""
+
+#: app/templates/profile.html:61 app/templates/urls.html:33
+msgid "Tıklamalar"
+msgstr ""
+
+#: app/templates/profile.html:67
+msgid "Linklerinizi Görüntüleyin"
+msgstr ""
+
+#: app/templates/profile.html:78
+msgid "Hesap Ayarları"
+msgstr ""
+
+#: app/templates/profile.html:86
+msgid "Şifre Değiştir"
+msgstr ""
+
+#: app/templates/profile.html:89
+msgid "Hesap güvenliğiniz için şifrenizi periyodik olarak değiştirin."
+msgstr ""
+
+#: app/templates/profile.html:94
+msgid "Link Geçmişi"
+msgstr ""
+
+#: app/templates/profile.html:97
+msgid "Oluşturduğunuz tüm kısa linkleri görüntüleyin."
+msgstr ""
+
+#: app/templates/urls.html:3
+msgid "Tüm URLler - Quick Link"
+msgstr ""
+
+#: app/templates/urls.html:10
+msgid "Kısaltılmış URLleriniz"
+msgstr ""
+
+#: app/templates/urls.html:12
+msgid "Tüm kısaltılmış linklerinizi tek bir yerde yönetin ve takip edin."
+msgstr ""
+
+#: app/templates/urls.html:21
+msgid "Yeni Link Oluştur"
+msgstr ""
+
+#: app/templates/urls.html:30
+#, fuzzy
+msgid "Kısa URL"
+msgstr "Tüm URL'ler"
+
+#: app/templates/urls.html:31
+#, fuzzy
+msgid "Orijinal URL"
+msgstr "Orijinal URL"
+
+#: app/templates/urls.html:36
+msgid "Oluşturulma Tarihi"
+msgstr ""
+
+#: app/templates/urls.html:38
+msgid "İşlemler"
+msgstr "İşlemler"
+
+#: app/templates/urls.html:82
+msgid "Henüz URL yok"
+msgstr ""
+
+#: app/templates/urls.html:83
+msgid "Burada görmek için ilk kısaltılmış URL'nizi oluşturun."
+msgstr ""
+
+#: app/templates/urls.html:85
+msgid "İlk Linkinizi Oluşturun"
+msgstr ""
+
+#: app/templates/urls.html:99
+msgid "Linki Sil"
+msgstr "Linki Sil"
+
+#: app/templates/urls.html:103
+msgid "Bu linki silmek istediğinizden emin misiniz?"
+msgstr "Bu linki silmek istediğinizden emin misiniz?"
+
+#: app/templates/urls.html:108
+msgid "Bu işlem geri alınamaz."
+msgstr "Bu işlem geri alınamaz."
+
+#: app/templates/urls.html:111
+msgid "İptal"
+msgstr "İptal"
+
+#: app/templates/urls.html:114
+msgid "Sil"
+msgstr "Sil"
+
+#: app/templates/auth/login.html:3
+#, fuzzy
+msgid "Giriş - Quick Link"
+msgstr "Hızlı giriş için:"
+
+#: app/templates/auth/login.html:60
+msgid "Tekrar Hoş Geldiniz"
+msgstr ""
+
+#: app/templates/auth/login.html:62
+msgid "Kısaltılmış URLlerinizi yönetmek için giriş yapın"
+msgstr ""
+
+#: app/templates/auth/login.html:67
+msgid "Giriş"
+msgstr ""
+
+#: app/templates/auth/login.html:73 app/templates/auth/register.html:79
+msgid "E-posta"
+msgstr ""
+
+#: app/templates/auth/login.html:79 app/templates/auth/register.html:85
+msgid "Şifre"
+msgstr ""
+
+#: app/templates/auth/login.html:85
+msgid "Beni hatırla"
+msgstr ""
+
+#: app/templates/auth/login.html:96
+msgid "Hesabınız yok mu?"
+msgstr ""
+
+#: app/templates/auth/login.html:110
+msgid "Google ile Giriş Yap"
+msgstr "Google ile Giriş Yap"
+
+#: app/templates/auth/register.html:3
+msgid "Kayıt Ol - Quick Link"
+msgstr ""
+
+#: app/templates/auth/register.html:60
+msgid "Hesap Oluştur"
+msgstr ""
+
+#: app/templates/auth/register.html:62
+msgid "Kısaltılmış URLler oluşturmaya ve yönetmeye başlamak için kayıt olun"
+msgstr ""
+
+#: app/templates/auth/register.html:73
+msgid "Kullanıcı Adı"
+msgstr ""
+
+#: app/templates/auth/register.html:98
+msgid "Zaten bir hesabınız var mı?"
+msgstr ""
+
+#: app/templates/auth/register.html:112
+msgid "Google ile Kayıt Ol"
+msgstr "Google ile Kayıt Ol"
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:556
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:560
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1124
+msgid "Aborted!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1349
+#: venv/lib/python3.12/site-packages/click/core.py:1379
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1396
+msgid "Options"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1424
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1437
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1645
+msgid "Commands"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1677
+msgid "Missing command."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1755
+msgid "No such command {name!r}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2313
+msgid "Value must be an iterable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2336
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2783
+msgid "env var: {var}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2813
+msgid "(dynamic)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2828
+msgid "default: {default}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2841
+msgid "required"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:457
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:520
+msgid "Show the version and exit."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:541
+msgid "Show this message and exit."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:49
+#: venv/lib/python3.12/site-packages/click/exceptions.py:88
+msgid "Error: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:80
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:129
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:131
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:187
+msgid "Missing argument"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:189
+msgid "Missing option"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:191
+msgid "Missing parameter"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:193
+msgid "Missing {param_type}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:200
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:220
+msgid "No such option: {name}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:234
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:270
+msgid "unknown error"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:277
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/formatting.py:156
+msgid "Usage:"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:233
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:415
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:475
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:325
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:333
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:176
+msgid "Error: {e.message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:267
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:301
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:395
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:415
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:471
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:612
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:636
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:826
+msgid "file"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:828
+msgid "directory"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:830
+msgid "path"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:881
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:890
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:898
+msgid "{name} {filename!r} is a directory."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:907
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:916
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:925
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:991
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/httplib2/__init__.py:408
+#, python-format
+msgid "Content purported to be compressed with %s but failed to decompress."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/httplib2/__init__.py:572
+#, python-format
+msgid "Unsupported value for qop: %s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/httplib2/__init__.py:576
+#: venv/lib/python3.12/site-packages/httplib2/__init__.py:654
+#, python-format
+msgid "Unsupported value for algorithm: %s.algorithm"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/httplib2/__init__.py:649
+msgid "The challenge doesn't contain a server nonce, or this one is empty."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/httplib2/__init__.py:659
+#, python-format
+msgid "Unsupported value for pw-algorithm: %s.pw-algorithm"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/httplib2/__init__.py:1468
+msgid "Redirected but the response is missing a Location: header."
+msgstr ""
+
+#~ msgid "Language"
+#~ msgstr "Dil"
+
+#~ msgid "Login"
+#~ msgstr "Giriş"
+
+#~ msgid "Register"
+#~ msgstr "Kayıt Ol"
+
+#~ msgid "Logout"
+#~ msgstr "Çıkış"
+
+#~ msgid "URL Shortener"
+#~ msgstr "URL Kısaltıcı"
+
+#~ msgid "Shorten"
+#~ msgstr "Kısalt"
+
+#~ msgid "Short URL:"
+#~ msgstr "Kısa URL:"
+
+#~ msgid "Copy"
+#~ msgstr "Kopyala"
+
+#~ msgid "Short URL"
+#~ msgstr "Kısa URL"
+
+#~ msgid "Clicks"
+#~ msgstr "Tıklanma"
+
+#~ msgid "Created At"
+#~ msgstr "Oluşturulma Tarihi"
+
+#~ msgid "Email"
+#~ msgstr "E-posta"
+
+#~ msgid "Password"
+#~ msgstr "Şifre"
+
+#~ msgid "Username"
+#~ msgstr "Kullanıcı Adı"
+
+#~ msgid "Remember me"
+#~ msgstr "Beni Hatırla"
+
+#~ msgid "Don't have an account?"
+#~ msgstr "Hesabınız yok mu?"
+
+#~ msgid "Already have an account?"
+#~ msgstr "Zaten hesabınız var mı?"
+
+#~ msgid "veya"
+#~ msgstr "veya"
+
+#~ msgid "Sign in with Google"
+#~ msgstr "Google ile Giriş Yap"
+
+#~ msgid "Sign up with Google"
+#~ msgstr "Google ile Kayıt Ol"
+
+#~ msgid "or"
+#~ msgstr "veya"
+
+#~ msgid "Hızlı giriş için:"
+#~ msgstr "Hızlı giriş için:"
+
+#~ msgid "Hızlı kayıt için:"
+#~ msgstr "Hızlı kayıt için:"
+
+#~ msgid "For quick registration:"
+#~ msgstr "Hızlı kayıt için:"
 

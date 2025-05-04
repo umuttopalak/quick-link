@@ -1,53 +1,59 @@
-document.getElementById('urlForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const urlInput = document.getElementById('urlInput');
-    const resultDiv = document.getElementById('result');
-    const shortUrlInput = document.getElementById('shortUrl');
-    
-    // Validate URL
-    if (!isValidURL(urlInput.value)) {
-        showAlert('Lütfen http:// veya https:// içeren geçerli bir URL girin', 'danger');
-        return;
-    }
-    
-    // Show loading indicator
-    const submitBtn = e.target.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> İşleniyor...';
-    submitBtn.disabled = true;
-    
-    try {
-        const response = await fetch('/shorten', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `url=${encodeURIComponent(urlInput.value)}`
+// Form submit işlemi
+document.addEventListener('DOMContentLoaded', function() {
+    const urlForm = document.getElementById('urlForm');
+    if (urlForm) {
+        urlForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const urlInput = document.getElementById('urlInput');
+            const resultDiv = document.getElementById('result');
+            const shortUrlInput = document.getElementById('shortUrl');
+            
+            // Validate URL
+            if (!isValidURL(urlInput.value)) {
+                showAlert('Lütfen http:// veya https:// içeren geçerli bir URL girin', 'danger');
+                return;
+            }
+            
+            // Show loading indicator
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> İşleniyor...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch('/shorten', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `url=${encodeURIComponent(urlInput.value)}`
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    shortUrlInput.value = data.short_url;
+                    resultDiv.classList.remove('d-none');
+                    
+                    // Scroll to result with smooth animation
+                    resultDiv.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Flash effect
+                    resultDiv.classList.add('highlight-animation');
+                    setTimeout(() => resultDiv.classList.remove('highlight-animation'), 1000);
+                } else {
+                    showAlert(data.error || 'Bir hata oluştu', 'danger');
+                }
+            } catch (error) {
+                showAlert('İsteğiniz işlenirken bir hata oluştu', 'danger');
+                console.error(error);
+            } finally {
+                // Restore button state
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
         });
-        
-        const data = await response.json();
-        
-        if (response.ok) {
-            shortUrlInput.value = data.short_url;
-            resultDiv.classList.remove('d-none');
-            
-            // Scroll to result with smooth animation
-            resultDiv.scrollIntoView({ behavior: 'smooth' });
-            
-            // Flash effect
-            resultDiv.classList.add('highlight-animation');
-            setTimeout(() => resultDiv.classList.remove('highlight-animation'), 1000);
-        } else {
-            showAlert(data.error || 'Bir hata oluştu', 'danger');
-        }
-    } catch (error) {
-        showAlert('İsteğiniz işlenirken bir hata oluştu', 'danger');
-        console.error(error);
-    } finally {
-        // Restore button state
-        submitBtn.innerHTML = originalBtnText;
-        submitBtn.disabled = false;
     }
 });
 

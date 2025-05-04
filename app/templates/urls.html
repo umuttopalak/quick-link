@@ -35,6 +35,7 @@
                                 <th>
                                     <i class="fas fa-calendar-alt me-1"></i>{{ _('Oluşturulma Tarihi') }}
                                 </th>
+                                <th>{{ _('İşlemler') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -62,6 +63,12 @@
                                         {{ url.created_at.strftime('%Y-%m-%d %H:%M') }}
                                     </small>
                                 </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-danger delete-btn" 
+                                            onclick="showDeleteModal({{ url.id }}, '{{ request.host_url }}{{ url.short_id }}')">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -83,4 +90,46 @@
         </div>
     </div>
 </div>
+
+<!-- Tek bir delete modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">{{ _('Linki Sil') }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>{{ _('Bu linki silmek istediğinizden emin misiniz?') }}</p>
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <strong id="urlToDelete"></strong>
+                </div>
+                <p class="text-muted small">{{ _('Bu işlem geri alınamaz.') }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('İptal') }}</button>
+                <form id="deleteUrlForm" method="POST">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash me-1"></i>{{ _('Sil') }}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function showDeleteModal(urlId, shortUrl) {
+        // Modal içeriğini güncelle
+        document.getElementById('urlToDelete').textContent = shortUrl;
+        document.getElementById('deleteUrlForm').action = "{{ url_for('main.delete_url', id=0) }}".replace('0', urlId);
+        
+        // Modal'ı göster
+        var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        deleteModal.show();
+    }
+</script>
 {% endblock %} 

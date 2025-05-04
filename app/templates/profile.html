@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Profil - Quick Link') }}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="mb-4">
+            <h1 class="h3 mb-0 text-primary">
+                <i class="fas fa-user-circle me-2"></i>{{ _('Profil') }}
+            </h1>
+            <p class="text-muted">{{ _('Hesap bilgilerinizi ve istatistiklerinizi görüntüleyin.') }}</p>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            {% if current_user.profile_picture %}
+                                <img src="{{ current_user.profile_picture }}" alt="{{ current_user.username }}" 
+                                     class="rounded-circle img-thumbnail" style="width: 100px; height: 100px; object-fit: cover;">
+                            {% else %}
+                                <div class="icon-circle bg-primary bg-opacity-10 text-primary mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-user fa-3x"></i>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <h5 class="card-title">{{ current_user.username }}</h5>
+                        <p class="text-muted">{{ current_user.email }}</p>
+                        <p class="text-muted small">
+                            <i class="fas fa-shield-alt me-1"></i>
+                            {{ _('Kimlik doğrulama: ') }}
+                            {% if current_user.auth_provider == 'google' %}
+                                <span class="badge bg-primary">Google</span>
+                            {% else %}
+                                <span class="badge bg-secondary">{{ _('Yerel') }}</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-chart-bar me-2"></i>{{ _('İstatistikler') }}
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <div class="col-6 mb-3">
+                                <div class="p-3 rounded bg-light">
+                                    <h3 class="text-primary">{{ urls_count }}</h3>
+                                    <p class="text-muted mb-0">{{ _('Linkler') }}</p>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="p-3 rounded bg-light">
+                                    <h3 class="text-primary">{{ clicks_count }}</h3>
+                                    <p class="text-muted mb-0">{{ _('Tıklamalar') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="{{ url_for('main.url_list') }}" class="btn btn-outline-primary">
+                                <i class="fas fa-link me-2"></i>{{ _('Linklerinizi Görüntüleyin') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-cog me-2"></i>{{ _('Hesap Ayarları') }}
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    {% if current_user.auth_provider == 'local' %}
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1"><i class="fas fa-key me-2"></i>{{ _('Şifre Değiştir') }}</h6>
+                            <small><i class="fas fa-angle-right"></i></small>
+                        </div>
+                        <p class="mb-1 text-muted small">{{ _('Hesap güvenliğiniz için şifrenizi periyodik olarak değiştirin.') }}</p>
+                    </a>
+                    {% endif %}
+                    <a href="{{ url_for('main.url_list') }}" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1"><i class="fas fa-history me-2"></i>{{ _('Link Geçmişi') }}</h6>
+                            <small><i class="fas fa-angle-right"></i></small>
+                        </div>
+                        <p class="mb-1 text-muted small">{{ _('Oluşturduğunuz tüm kısa linkleri görüntüleyin.') }}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
