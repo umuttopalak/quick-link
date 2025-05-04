@@ -2,6 +2,56 @@
 
 {% block title %}{{ _('Kayıt Ol - Quick Link') }}{% endblock %}
 
+{% block head %}
+{{ super() }}
+<style>
+    .google-btn {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        color: #4285F4;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 12px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .google-btn:hover {
+        background-color: #f8f9fa;
+        border-color: #4285F4;
+        color: #4285F4;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .google-btn img {
+        margin-right: 12px;
+    }
+    .divider {
+        position: relative;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .divider:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #ddd;
+    }
+    .divider span {
+        background: #fff;
+        padding: 0 15px;
+        position: relative;
+        color: #757575;
+    }
+    .auth-methods {
+        margin-top: 25px;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-6 col-lg-5">
@@ -42,6 +92,7 @@
                         </button>
                     </div>
                 </form>
+                
                 <hr>
                 <div class="text-center">
                     <p class="mb-0">{{ _('Zaten bir hesabınız var mı?') }} 
@@ -50,8 +101,28 @@
                         </a>
                     </p>
                 </div>
+                
+                <div class="divider">
+                    <br/>
+                </div>
+                
+                <div class="auth-methods text-center">
+                    <button id="googleSignIn" class="btn google-btn mx-auto" style="max-width: 240px;">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20" height="20" alt="Google">
+                        {{ _('Google ile Kayıt Ol') }}
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Firebase initialization -->
+<script src="{{ url_for('static', filename='js/firebase-init.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM fully loaded and parsed - Register page");
+        setupGoogleSignIn('googleSignIn', '{{ url_for("auth.google_auth") }}');
+    });
+</script>
 {% endblock %} 
